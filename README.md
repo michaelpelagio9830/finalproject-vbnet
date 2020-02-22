@@ -16,9 +16,9 @@
 Tic-Tac-Toe - Multiplayer Edition
 
 A game by:
-Condeza, Aaron
-Cumti, Tim Augustus
-Pelagio, Michael
+Condeza, Aaron M.
+Cumti, Tim Augustus A.
+Pelagio, Michael B.
 Santos, Norman Eisley
 
 What is Tic-Tac-Toe?
