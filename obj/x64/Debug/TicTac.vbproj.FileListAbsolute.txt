@@ -1,0 +1,7 @@
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.vbprojAssemblyReference.cache
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.Tic_Tac_Toe_Game.Form1.resources
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.Tic_Tac_Toe_Game.Game.resources
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.Resources.resources
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.vbproj.GenerateResource.cache
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.TicTac.Form1.resources
+C:\Users\aaron\source\repos\TicTac\obj\x64\Debug\TicTac.TicTac.Game.resources
