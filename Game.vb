@@ -12,7 +12,7 @@ Namespace TicTac
     Partial Public Class Game
         Inherits Form
 
-        Public Sub New(ByVal isHost As Boolean, ByVal Optional ip As String = Nothing)
+        Public Sub Game(ByVal isHost As Boolean, ByVal Optional ip As String = Nothing)
             InitializeComponent()
             AddHandler MessageReceiver.DoWork, AddressOf MessageReceiver_DoWork
             CheckForIllegalCrossThreadCalls = False
@@ -55,7 +55,9 @@ Namespace TicTac
         Private client As TcpClient
 
         Private Function CheckState() As Boolean
-            If button1.Text = button2.Text AndAlso button2.Text = button3.Text AndAlso button3.Text <> "" Then
+
+            'HORIZONTALS
+            If button1.Text Is button2.Text AndAlso button2.Text Is button3.Text AndAlso button3.Text IsNot " " Then
 
                 If button1.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -66,7 +68,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button4.Text = button5.Text AndAlso button5.Text = button6.Text AndAlso button6.Text <> "" Then
+            ElseIf button4.Text Is button5.Text AndAlso button5.Text Is button6.Text AndAlso button6.Text IsNot "" Then
 
                 If button4.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -77,7 +79,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button7.Text = button8.Text AndAlso button8.Text = button9.Text AndAlso button9.Text <> "" Then
+            ElseIf button7.Text Is button8.Text AndAlso button8.Text Is button9.Text AndAlso button9.Text IsNot "" Then
 
                 If button7.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -88,7 +90,9 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button1.Text = button4.Text AndAlso button4.Text = button7.Text AndAlso button7.Text <> "" Then
+
+                'VERTICALS
+            ElseIf button1.Text Is button4.Text AndAlso button4.Text Is button7.Text AndAlso button7.Text IsNot "" Then
 
                 If button1.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -99,7 +103,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button2.Text = button5.Text AndAlso button5.Text = button8.Text AndAlso button8.Text <> "" Then
+            ElseIf button2.Text Is button5.Text AndAlso button5.Text Is button8.Text AndAlso button8.Text IsNot "" Then
 
                 If button2.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -110,7 +114,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button3.Text = button6.Text AndAlso button6.Text = button9.Text AndAlso button9.Text <> "" Then
+            ElseIf button3.Text Is button6.Text AndAlso button6.Text Is button9.Text AndAlso button9.Text IsNot "" Then
 
                 If button3.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -121,7 +125,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button1.Text = button5.Text AndAlso button5.Text = button9.Text AndAlso button9.Text <> "" Then
+            ElseIf button1.Text Is button5.Text AndAlso button5.Text Is button9.Text AndAlso button9.Text IsNot "" Then
 
                 If button1.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -132,7 +136,7 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button3.Text = button5.Text AndAlso button5.Text = button7.Text AndAlso button7.Text <> "" Then
+            ElseIf button3.Text Is button5.Text AndAlso button5.Text Is button7.Text AndAlso button7.Text IsNot "" Then
 
                 If button3.Text(0) = PlayerChar Then
                     label1.Text = "You Won!"
@@ -143,7 +147,9 @@ Namespace TicTac
                 End If
 
                 Return True
-            ElseIf button1.Text <> "" AndAlso button2.Text <> "" AndAlso button3.Text <> "" AndAlso button4.Text <> "" AndAlso button5.Text <> "" AndAlso button6.Text <> "" AndAlso button7.Text <> "" AndAlso button8.Text <> "" AndAlso button9.Text <> "" Then
+
+                'DRAW
+            ElseIf button1.Text IsNot "" AndAlso button2.Text IsNot "" AndAlso button3.Text IsNot "" AndAlso button4.Text IsNot "" AndAlso button5.Text IsNot "" AndAlso button6.Text IsNot "" AndAlso button7.Text IsNot "" AndAlso button8.Text IsNot "" AndAlso button9.Text IsNot "" Then
                 label1.Text = "It's a draw!"
                 MessageBox.Show("It's a draw!")
                 Return True
@@ -152,7 +158,7 @@ Namespace TicTac
             Return False
         End Function
 
-        Private Sub FreezeBoard()
+        Private Sub FreezeBoard() 'To make all buttons unclickable on your turn
             button1.Enabled = False
             button2.Enabled = False
             button3.Enabled = False
@@ -164,7 +170,7 @@ Namespace TicTac
             button9.Enabled = False
         End Sub
 
-        Private Sub UnfreezeBoard()
+        Private Sub UnfreezeBoard() 'To make all buttons clickable on your turn
             If button1.Text = "" Then button1.Enabled = True
             If button2.Text = "" Then button2.Enabled = True
             If button3.Text = "" Then button3.Enabled = True
@@ -212,83 +218,84 @@ Namespace TicTac
             '
             'button9
             '
-            Me.button9.Location = New System.Drawing.Point(180, 220)
+            Me.button9.Location = New System.Drawing.Point(202, 241)
             Me.button9.Name = "button9"
-            Me.button9.Size = New System.Drawing.Size(62, 60)
+            Me.button9.Size = New System.Drawing.Size(69, 67)
             Me.button9.TabIndex = 19
             Me.button9.UseVisualStyleBackColor = True
             '
             'button8
             '
-            Me.button8.Location = New System.Drawing.Point(112, 220)
+            Me.button8.Location = New System.Drawing.Point(134, 241)
             Me.button8.Name = "button8"
-            Me.button8.Size = New System.Drawing.Size(62, 60)
+            Me.button8.Size = New System.Drawing.Size(69, 67)
             Me.button8.TabIndex = 18
             Me.button8.UseVisualStyleBackColor = True
             '
             'button7
             '
-            Me.button7.Location = New System.Drawing.Point(44, 220)
+            Me.button7.Location = New System.Drawing.Point(66, 241)
             Me.button7.Name = "button7"
-            Me.button7.Size = New System.Drawing.Size(62, 60)
+            Me.button7.Size = New System.Drawing.Size(69, 67)
             Me.button7.TabIndex = 17
             Me.button7.UseVisualStyleBackColor = True
             '
             'button6
             '
-            Me.button6.Location = New System.Drawing.Point(180, 154)
+            Me.button6.Location = New System.Drawing.Point(202, 175)
             Me.button6.Name = "button6"
-            Me.button6.Size = New System.Drawing.Size(62, 60)
+            Me.button6.Size = New System.Drawing.Size(69, 67)
             Me.button6.TabIndex = 16
             Me.button6.UseVisualStyleBackColor = True
             '
             'button5
             '
-            Me.button5.Location = New System.Drawing.Point(112, 154)
+            Me.button5.Location = New System.Drawing.Point(134, 175)
             Me.button5.Name = "button5"
-            Me.button5.Size = New System.Drawing.Size(62, 60)
+            Me.button5.Size = New System.Drawing.Size(69, 67)
             Me.button5.TabIndex = 15
             Me.button5.UseVisualStyleBackColor = True
             '
             'button4
             '
-            Me.button4.Location = New System.Drawing.Point(44, 154)
+            Me.button4.Location = New System.Drawing.Point(66, 175)
             Me.button4.Name = "button4"
-            Me.button4.Size = New System.Drawing.Size(62, 60)
+            Me.button4.Size = New System.Drawing.Size(69, 67)
             Me.button4.TabIndex = 14
             Me.button4.UseVisualStyleBackColor = True
             '
             'button3
             '
-            Me.button3.Location = New System.Drawing.Point(180, 88)
+            Me.button3.Location = New System.Drawing.Point(202, 109)
             Me.button3.Name = "button3"
-            Me.button3.Size = New System.Drawing.Size(62, 60)
+            Me.button3.Size = New System.Drawing.Size(69, 67)
             Me.button3.TabIndex = 13
             Me.button3.UseVisualStyleBackColor = True
             '
             'button2
             '
-            Me.button2.Location = New System.Drawing.Point(112, 88)
+            Me.button2.Location = New System.Drawing.Point(134, 109)
             Me.button2.Name = "button2"
-            Me.button2.Size = New System.Drawing.Size(62, 60)
+            Me.button2.Size = New System.Drawing.Size(69, 67)
             Me.button2.TabIndex = 12
             Me.button2.UseVisualStyleBackColor = True
             '
             'button1
             '
-            Me.button1.Location = New System.Drawing.Point(44, 88)
+            Me.button1.Location = New System.Drawing.Point(66, 109)
             Me.button1.Name = "button1"
-            Me.button1.Size = New System.Drawing.Size(62, 60)
+            Me.button1.Size = New System.Drawing.Size(69, 67)
             Me.button1.TabIndex = 11
             Me.button1.UseVisualStyleBackColor = True
             '
             'label1
             '
             Me.label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-        Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.label1.Location = New System.Drawing.Point(66, 40)
             Me.label1.Name = "label1"
-            Me.label1.Size = New System.Drawing.Size(145, 45)
+            Me.label1.Size = New System.Drawing.Size(197, 45)
             Me.label1.TabIndex = 10
             Me.label1.Text = "Your Turn!"
             Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -297,7 +304,8 @@ Namespace TicTac
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(289, 342)
+            Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+            Me.ClientSize = New System.Drawing.Size(341, 360)
             Me.Controls.Add(Me.button9)
             Me.Controls.Add(Me.button8)
             Me.Controls.Add(Me.button7)
@@ -320,6 +328,16 @@ Namespace TicTac
         Private WithEvents button2 As Button
         Private WithEvents button1 As Button
         Private WithEvents label1 As Label
+        Private v As Boolean
+
+        Public Sub New(v As Boolean, text As String)
+            Me.v = v
+            Me.Text = text
+        End Sub
+
+        Public Sub New(v As Boolean)
+            Me.v = v
+        End Sub
 
         Private Sub button1_Click_1(sender As Object, e As EventArgs) Handles button1.Click
 
@@ -400,6 +418,7 @@ Namespace TicTac
             MessageReceiver.CancelAsync()
             If server IsNot Nothing Then server.[Stop]()
         End Sub
+
     End Class
 
 End Namespace
