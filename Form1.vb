@@ -11,15 +11,25 @@ Namespace TicTac
     Partial Public Class Form1
         Inherits Form
 
-        Public Sub New()
+        Public Sub Form1()
             InitializeComponent()
         End Sub
 
         Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
 
+            Dim newGame As Game = New Game(False, textBox1.Text)
+            Visible = False
+            If Not newGame.IsDisposed Then newGame.ShowDialog()
+            Visible = True
+
         End Sub
 
         Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs)
+
+            Dim newGame As Game = New Game(True)
+            Visible = False
+            If Not newGame.IsDisposed Then newGame.ShowDialog()
+            Visible = True
 
         End Sub
 
@@ -96,6 +106,10 @@ Namespace TicTac
             Me.groupBox1.ResumeLayout(False)
             Me.groupBox1.PerformLayout()
             Me.ResumeLayout(False)
+
+        End Sub
+
+        Private Sub button1_Click_1(sender As Object, e As EventArgs) Handles button1.Click
 
         End Sub
     End Class
