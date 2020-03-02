@@ -1,7 +1,8 @@
 ********************************************************************************************
 *                                                                                           *
 *  |********|                 |********|                     |********|                     *
-*  |********|                 |********|                     |********|                     *     *     |**|                       |**|                           |**|                        *
+*  |********|                 |********|                     |********|                     *     
+*     |**|                       |**|                           |**|                        *
 *     |**|  |**|  |*******|      |**|  |*******| |*******|      |**|  |*******| |***__***|  *
 *     |**|  |**|  |**| |__|      |**|  |__| |__| |**| |__|      |**|  |**| |**| |**|__|__|  *
 *     |**|  |**|  |**|  __       |**|   ____|**| |**|  __       |**|  |**| |**| |**|   ___  *
@@ -12,13 +13,14 @@
 ********************************************************************************************
 
 
-Tic-Tac-Toe - Multiplayer Edition
+Tic-Tac-Toe - Multiplayer Played Through LAN
 
 A game by:
 Condeza, Aaron M.
 Cumti, Tim Augustus A.
 Pelagio, Michael B.
 Santos, Norman Eisley 
+
 
 What is Tic-Tac-Toe?
 	Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
