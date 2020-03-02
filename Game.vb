@@ -293,9 +293,9 @@ Namespace TicTac
             Me.label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.label1.Location = New System.Drawing.Point(66, 40)
+            Me.label1.Location = New System.Drawing.Point(62, 38)
             Me.label1.Name = "label1"
-            Me.label1.Size = New System.Drawing.Size(197, 45)
+            Me.label1.Size = New System.Drawing.Size(224, 56)
             Me.label1.TabIndex = 10
             Me.label1.Text = "Your Turn!"
             Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
