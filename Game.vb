@@ -218,7 +218,7 @@ Namespace TicTac
             '
             'button9
             '
-            Me.button9.Location = New System.Drawing.Point(202, 241)
+            Me.button9.Location = New System.Drawing.Point(202, 251)
             Me.button9.Name = "button9"
             Me.button9.Size = New System.Drawing.Size(69, 67)
             Me.button9.TabIndex = 19
@@ -226,7 +226,7 @@ Namespace TicTac
             '
             'button8
             '
-            Me.button8.Location = New System.Drawing.Point(134, 241)
+            Me.button8.Location = New System.Drawing.Point(134, 251)
             Me.button8.Name = "button8"
             Me.button8.Size = New System.Drawing.Size(69, 67)
             Me.button8.TabIndex = 18
@@ -234,7 +234,7 @@ Namespace TicTac
             '
             'button7
             '
-            Me.button7.Location = New System.Drawing.Point(66, 241)
+            Me.button7.Location = New System.Drawing.Point(66, 251)
             Me.button7.Name = "button7"
             Me.button7.Size = New System.Drawing.Size(69, 67)
             Me.button7.TabIndex = 17
@@ -242,7 +242,7 @@ Namespace TicTac
             '
             'button6
             '
-            Me.button6.Location = New System.Drawing.Point(202, 175)
+            Me.button6.Location = New System.Drawing.Point(202, 185)
             Me.button6.Name = "button6"
             Me.button6.Size = New System.Drawing.Size(69, 67)
             Me.button6.TabIndex = 16
@@ -250,7 +250,7 @@ Namespace TicTac
             '
             'button5
             '
-            Me.button5.Location = New System.Drawing.Point(134, 175)
+            Me.button5.Location = New System.Drawing.Point(134, 185)
             Me.button5.Name = "button5"
             Me.button5.Size = New System.Drawing.Size(69, 67)
             Me.button5.TabIndex = 15
@@ -258,7 +258,7 @@ Namespace TicTac
             '
             'button4
             '
-            Me.button4.Location = New System.Drawing.Point(66, 175)
+            Me.button4.Location = New System.Drawing.Point(66, 185)
             Me.button4.Name = "button4"
             Me.button4.Size = New System.Drawing.Size(69, 67)
             Me.button4.TabIndex = 14
@@ -266,7 +266,7 @@ Namespace TicTac
             '
             'button3
             '
-            Me.button3.Location = New System.Drawing.Point(202, 109)
+            Me.button3.Location = New System.Drawing.Point(202, 119)
             Me.button3.Name = "button3"
             Me.button3.Size = New System.Drawing.Size(69, 67)
             Me.button3.TabIndex = 13
@@ -274,7 +274,7 @@ Namespace TicTac
             '
             'button2
             '
-            Me.button2.Location = New System.Drawing.Point(134, 109)
+            Me.button2.Location = New System.Drawing.Point(134, 119)
             Me.button2.Name = "button2"
             Me.button2.Size = New System.Drawing.Size(69, 67)
             Me.button2.TabIndex = 12
@@ -282,7 +282,7 @@ Namespace TicTac
             '
             'button1
             '
-            Me.button1.Location = New System.Drawing.Point(66, 109)
+            Me.button1.Location = New System.Drawing.Point(66, 119)
             Me.button1.Name = "button1"
             Me.button1.Size = New System.Drawing.Size(69, 67)
             Me.button1.TabIndex = 11
@@ -293,9 +293,9 @@ Namespace TicTac
             Me.label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.label1.Location = New System.Drawing.Point(62, 38)
+            Me.label1.Location = New System.Drawing.Point(62, 46)
             Me.label1.Name = "label1"
-            Me.label1.Size = New System.Drawing.Size(224, 56)
+            Me.label1.Size = New System.Drawing.Size(220, 56)
             Me.label1.TabIndex = 10
             Me.label1.Text = "Your Turn!"
             Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -305,7 +305,7 @@ Namespace TicTac
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-            Me.ClientSize = New System.Drawing.Size(341, 360)
+            Me.ClientSize = New System.Drawing.Size(337, 409)
             Me.Controls.Add(Me.button9)
             Me.Controls.Add(Me.button8)
             Me.Controls.Add(Me.button7)
