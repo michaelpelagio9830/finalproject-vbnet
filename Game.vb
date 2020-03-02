@@ -20,7 +20,7 @@ Namespace TicTac
             If isHost Then
                 PlayerChar = "X"c
                 OpponentChar = "O"c
-                server = New TcpListener(System.Net.IPAddress.Any, 5732)
+                server = New TcpListener(System.Net.IPAddress.Any, 465)
                 server.Start()
                 sock = server.AcceptSocket()
             Else
@@ -182,7 +182,7 @@ Namespace TicTac
             If button9.Text = "" Then button9.Enabled = True
         End Sub
 
-        Private Sub ReceiveMove()
+        Private Sub ReceiveMove() 'this is where it translates the recieving of the move
             Dim buffer As Byte() = New Byte(0) {}
             sock.Receive(buffer)
             If buffer(0) = 1 Then button1.Text = OpponentChar.ToString()
@@ -371,6 +371,7 @@ Namespace TicTac
             sock.Send(num)
             button4.Text = PlayerChar.ToString()
             MessageReceiver.RunWorkerAsync()
+
         End Sub
 
         Private Sub button5_Click(sender As Object, e As EventArgs) Handles button5.Click
@@ -379,6 +380,7 @@ Namespace TicTac
             sock.Send(num)
             button5.Text = PlayerChar.ToString()
             MessageReceiver.RunWorkerAsync()
+
         End Sub
 
         Private Sub button6_Click(sender As Object, e As EventArgs) Handles button6.Click
@@ -414,7 +416,7 @@ Namespace TicTac
         End Sub
 
         Private Sub Game_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-            MessageReceiver.WorkerSupportsCancellation = True
+            MessageReceiver.WorkerSupportsCancellation = False
             MessageReceiver.CancelAsync()
             If server IsNot Nothing Then server.[Stop]()
         End Sub

@@ -111,8 +111,5 @@ Namespace TicTac
 
         End Sub
 
-        Private Sub button1_Click_1(sender As Object, e As EventArgs) Handles button1.Click
-
-        End Sub
     End Class
 End Namespace
