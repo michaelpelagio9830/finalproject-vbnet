@@ -61,7 +61,7 @@ Namespace TicTac
             Me.groupBox1.Controls.Add(Me.textBox1)
             Me.groupBox1.Controls.Add(Me.label1)
             Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-            Me.groupBox1.Location = New System.Drawing.Point(42, 64)
+            Me.groupBox1.Location = New System.Drawing.Point(57, 70)
             Me.groupBox1.Name = "groupBox1"
             Me.groupBox1.Size = New System.Drawing.Size(335, 80)
             Me.groupBox1.TabIndex = 4
@@ -88,7 +88,7 @@ Namespace TicTac
             '
             'button2
             '
-            Me.button2.Location = New System.Drawing.Point(42, 150)
+            Me.button2.Location = New System.Drawing.Point(57, 156)
             Me.button2.Name = "button2"
             Me.button2.Size = New System.Drawing.Size(335, 38)
             Me.button2.TabIndex = 5
@@ -100,7 +100,7 @@ Namespace TicTac
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-            Me.ClientSize = New System.Drawing.Size(422, 251)
+            Me.ClientSize = New System.Drawing.Size(435, 262)
             Me.Controls.Add(Me.groupBox1)
             Me.Controls.Add(Me.button2)
             Me.Name = "Form1"

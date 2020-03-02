@@ -13,7 +13,7 @@
 ********************************************************************************************
 
 
-Tic-Tac-Toe - Multiplayer Edition
+Tic-Tac-Toe - Multiplayer Verison Played Through LAN
 
 A game by:
 Condeza, Aaron M.
