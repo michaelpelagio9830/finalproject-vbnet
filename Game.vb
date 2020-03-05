@@ -20,7 +20,11 @@ Namespace Tic_Tac_Toe_Game
             If isHost Then
                 PlayerChar = "X"c
                 OpponentChar = "O"c
+<<<<<<< HEAD
                 server = New TcpListener(Net.IPAddress.Any, 5732)
+=======
+                server = New TcpListener(System.Net.IPAddress.Any, 465)
+>>>>>>> 2b4ee2a53c80225493f4e2f741a7e3a1d43c1e85
                 server.Start()
                 sock = server.AcceptSocket()
             Else
@@ -248,7 +252,7 @@ Namespace Tic_Tac_Toe_Game
 >>>>>>> ac7f06c067e3979da6ab3259f7fb7a4b9b9183e2
         End Sub
 
-        Private Sub ReceiveMove()
+        Private Sub ReceiveMove() 'this is where it translates the recieving of the move
             Dim buffer As Byte() = New Byte(0) {}
             sock.Receive(buffer)
 <<<<<<< HEAD
@@ -285,7 +289,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button9
             '
-            Me.button9.Location = New System.Drawing.Point(202, 241)
+            Me.button9.Location = New System.Drawing.Point(202, 251)
             Me.button9.Name = "button9"
             Me.button9.Size = New System.Drawing.Size(69, 67)
             Me.button9.TabIndex = 19
@@ -293,7 +297,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button8
             '
-            Me.button8.Location = New System.Drawing.Point(134, 241)
+            Me.button8.Location = New System.Drawing.Point(134, 251)
             Me.button8.Name = "button8"
             Me.button8.Size = New System.Drawing.Size(69, 67)
             Me.button8.TabIndex = 18
@@ -301,7 +305,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button7
             '
-            Me.button7.Location = New System.Drawing.Point(66, 241)
+            Me.button7.Location = New System.Drawing.Point(66, 251)
             Me.button7.Name = "button7"
             Me.button7.Size = New System.Drawing.Size(69, 67)
             Me.button7.TabIndex = 17
@@ -309,7 +313,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button6
             '
-            Me.button6.Location = New System.Drawing.Point(202, 175)
+            Me.button6.Location = New System.Drawing.Point(202, 185)
             Me.button6.Name = "button6"
             Me.button6.Size = New System.Drawing.Size(69, 67)
             Me.button6.TabIndex = 16
@@ -317,7 +321,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button5
             '
-            Me.button5.Location = New System.Drawing.Point(134, 175)
+            Me.button5.Location = New System.Drawing.Point(134, 185)
             Me.button5.Name = "button5"
             Me.button5.Size = New System.Drawing.Size(69, 67)
             Me.button5.TabIndex = 15
@@ -325,7 +329,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button4
             '
-            Me.button4.Location = New System.Drawing.Point(66, 175)
+            Me.button4.Location = New System.Drawing.Point(66, 185)
             Me.button4.Name = "button4"
             Me.button4.Size = New System.Drawing.Size(69, 67)
             Me.button4.TabIndex = 14
@@ -333,7 +337,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button3
             '
-            Me.button3.Location = New System.Drawing.Point(202, 109)
+            Me.button3.Location = New System.Drawing.Point(202, 119)
             Me.button3.Name = "button3"
             Me.button3.Size = New System.Drawing.Size(69, 67)
             Me.button3.TabIndex = 13
@@ -341,7 +345,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button2
             '
-            Me.button2.Location = New System.Drawing.Point(134, 109)
+            Me.button2.Location = New System.Drawing.Point(134, 119)
             Me.button2.Name = "button2"
             Me.button2.Size = New System.Drawing.Size(69, 67)
             Me.button2.TabIndex = 12
@@ -349,7 +353,7 @@ Namespace Tic_Tac_Toe_Game
             '
             'button1
             '
-            Me.button1.Location = New System.Drawing.Point(66, 109)
+            Me.button1.Location = New System.Drawing.Point(66, 119)
             Me.button1.Name = "button1"
             Me.button1.Size = New System.Drawing.Size(69, 67)
             Me.button1.TabIndex = 11
@@ -362,7 +366,7 @@ Namespace Tic_Tac_Toe_Game
             Me.label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
             Me.label1.Location = New System.Drawing.Point(62, 38)
             Me.label1.Name = "label1"
-            Me.label1.Size = New System.Drawing.Size(224, 56)
+            Me.label1.Size = New System.Drawing.Size(220, 56)
             Me.label1.TabIndex = 10
             Me.label1.Text = "Your Turn!"
             Me.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -372,7 +376,7 @@ Namespace Tic_Tac_Toe_Game
             Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-            Me.ClientSize = New System.Drawing.Size(341, 360)
+            Me.ClientSize = New System.Drawing.Size(337, 409)
             Me.Controls.Add(Me.button9)
             Me.Controls.Add(Me.button8)
             Me.Controls.Add(Me.button7)
@@ -447,6 +451,7 @@ Namespace Tic_Tac_Toe_Game
             sock.Send(num)
             Me.button4.Text = PlayerChar.ToString()
             MessageReceiver.RunWorkerAsync()
+
         End Sub
 
         Private Sub button5_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -454,6 +459,7 @@ Namespace Tic_Tac_Toe_Game
             sock.Send(num)
             Me.button5.Text = PlayerChar.ToString()
             MessageReceiver.RunWorkerAsync()
+
         End Sub
 
         Private Sub button6_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -484,8 +490,13 @@ Namespace Tic_Tac_Toe_Game
             MessageReceiver.RunWorkerAsync()
         End Sub
 
+<<<<<<< HEAD
         Private Sub Game_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs)
             MessageReceiver.WorkerSupportsCancellation = True
+=======
+        Private Sub Game_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+            MessageReceiver.WorkerSupportsCancellation = False
+>>>>>>> 2b4ee2a53c80225493f4e2f741a7e3a1d43c1e85
             MessageReceiver.CancelAsync()
             If server IsNot Nothing Then server.Stop()
         End Sub

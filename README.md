@@ -13,14 +13,22 @@
 ********************************************************************************************
 
 
+<<<<<<< HEAD
 Tic-Tac-Toe - Multiplayer Played Through LAN
+=======
+Tic-Tac-Toe - Multiplayer Verison Played Through LAN
+>>>>>>> 2b4ee2a53c80225493f4e2f741a7e3a1d43c1e85
 
 A game by:
 Condeza, Aaron M.
 Cumti, Tim Augustus A.
 Pelagio, Michael B.
+<<<<<<< HEAD
 Santos, Norman Eisley 
 
+=======
+Santos, Norman Eisley
+>>>>>>> 2b4ee2a53c80225493f4e2f741a7e3a1d43c1e85
 
 What is Tic-Tac-Toe?
 	Tic-tac-toe is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
