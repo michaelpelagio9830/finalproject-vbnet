@@ -1,16 +1,11 @@
 ﻿Imports System
-Imports System.Collections.Generic
-Imports System.ComponentModel
-Imports System.Data
-Imports System.Drawing
-Imports System.Linq
-Imports System.Text
 Imports System.Windows.Forms
 
-Namespace TicTac
-    Partial Public Class Form1
+Namespace Tic_Tac_Toe_Game
+    Public Partial Class Form1
         Inherits Form
 
+<<<<<<< HEAD
         Public Sub Form1()
             InitializeComponent()
         End Sub
@@ -109,6 +104,24 @@ Namespace TicTac
             Me.groupBox1.PerformLayout()
             Me.ResumeLayout(False)
 
+=======
+        Public Sub New()
+            Me.InitializeComponent()
+        End Sub
+
+        Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs)
+            Dim newGame As Tic_Tac_Toe_Game.Game = New Tic_Tac_Toe_Game.Game(False, Me.textBox1.Text)
+            Visible = False
+            If Not newGame.IsDisposed Then newGame.ShowDialog()
+            Visible = True
+        End Sub
+
+        Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs)
+            Dim newGame As Tic_Tac_Toe_Game.Game = New Tic_Tac_Toe_Game.Game(True)
+            Visible = False
+            If Not newGame.IsDisposed Then newGame.ShowDialog()
+            Visible = True
+>>>>>>> ac7f06c067e3979da6ab3259f7fb7a4b9b9183e2
         End Sub
 
         Private Sub button1_Click_1(sender As Object, e As EventArgs) Handles button1.Click
