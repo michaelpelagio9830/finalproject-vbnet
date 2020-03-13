@@ -32,7 +32,7 @@
             button1 = New Windows.Forms.Button()
             button2 = New Windows.Forms.Button()
             groupBox1.SuspendLayout()
-            Me.SuspendLayout()
+            SuspendLayout()
             ' 
             ' groupBox1
             ' 
@@ -70,7 +70,7 @@
             button1.TabIndex = 2
             button1.Text = "Connect"
             button1.UseVisualStyleBackColor = True
-            AddHandler button1.Click, New EventHandler(AddressOf Me.button1_Click)
+            AddHandler button1.Click, New EventHandler(AddressOf button1_Click)
             ' 
             ' button2
             ' 
@@ -80,23 +80,23 @@
             button2.TabIndex = 3
             button2.Text = "Host Game"
             button2.UseVisualStyleBackColor = True
-            AddHandler button2.Click, New EventHandler(AddressOf Me.button2_Click)
+            AddHandler button2.Click, New EventHandler(AddressOf button2_Click)
             ' 
             ' Form1
             ' 
-            Me.AutoScaleDimensions = New Drawing.SizeF(8F, 16F)
-            Me.AutoScaleMode = Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New Drawing.Size(366, 158)
-            Me.Controls.Add(button2)
-            Me.Controls.Add(groupBox1)
-            Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
-            Me.MaximizeBox = False
-            Me.MinimizeBox = False
-            Me.Name = "Form1"
-            Me.Text = "Tic Tac Toe Game"
+            AutoScaleDimensions = New Drawing.SizeF(8F, 16F)
+            AutoScaleMode = Windows.Forms.AutoScaleMode.Font
+            ClientSize = New Drawing.Size(366, 158)
+            Controls.Add(button2)
+            Controls.Add(groupBox1)
+            FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+            MaximizeBox = False
+            MinimizeBox = False
+            Name = "Form1"
+            Text = "Tic Tac Toe Game"
             groupBox1.ResumeLayout(False)
             groupBox1.PerformLayout()
-            Me.ResumeLayout(False)
+            ResumeLayout(False)
         End Sub
 
 
