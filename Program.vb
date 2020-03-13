@@ -10,7 +10,7 @@ Namespace Tic_Tac_Toe_Game
         Private Sub Main()
             Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
-            Application.Run(New Tic_Tac_Toe_Game.Form1())
+            Application.Run(New Form1())
         End Sub
     End Module
 End Namespace
